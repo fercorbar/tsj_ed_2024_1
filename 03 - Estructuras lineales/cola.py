@@ -6,8 +6,6 @@ class Cola:
         self.cantidad_valores_encolados =0
         self.__arreglo= [None]* self.max
 
-
-
     def encolar(self, valor):
         if self.esta_llena() == True:
             print("No se puede encolar, la cola está llena")
