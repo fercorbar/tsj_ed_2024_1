@@ -121,32 +121,31 @@ class Cola:
             return None
         else:
             valor = self.__lista.head.data
-            self.__lista.eliminar_nodo_inicio
+            self.__lista.eliminar_nodo_inicio()
             return valor
 
     def consultar(self):
         if not self.__lista.head:
-            print("La pila está vacía.")
+            print("La cola está vacía.")
             return None
         else:
             return self.__lista.consultar_lista()
 
-mi_pila = Pila()
-mi_pila.consultar()
-mi_pila.apilar("S")
-mi_pila.apilar("I")
-mi_pila.apilar("L")
-mi_pila.apilar("O")
-mi_pila.apilar("H")
-mi_pila.apilar("B")
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-
-print(mi_pila.consultar())
+# mi_pila = Pila()
+# mi_pila.consultar()
+# mi_pila.apilar("S")
+# mi_pila.apilar("I")
+# mi_pila.apilar("L")
+# mi_pila.apilar("O")
+# mi_pila.apilar("H")
+# mi_pila.apilar("B")
+# print(mi_pila.desapilar())
+# print(mi_pila.desapilar())
+# print(mi_pila.desapilar())
+# print(mi_pila.desapilar())
+# print(mi_pila.desapilar())
+# print(mi_pila.desapilar())
+# print(mi_pila.consultar())
         
 
 mi_cola = Cola()
