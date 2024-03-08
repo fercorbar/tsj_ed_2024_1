@@ -102,27 +102,83 @@ class Pila():
         
     def consultar(self):
         if not self.__lista.head:
-            print("No se puede consultar, la pila está vacía.")
+            print("La pila está vacía.")
             return None
         else:
             return self.__lista.consultar_lista()
+
+class Cola:
+    def __init__(self):
+        self.__lista = LinKedListDouble()
+
+    def encolar(self, valor):
+        self.__lista.agregar_nodo_al_final(valor)
+        return valor
+
+    def desencolar(self):
+        if not self.__lista:
+            print("No se puede desencolar; la cola esta vacia")
+            return None
+        else:
+            valor = self.__lista.head.data
+            self.__lista.eliminar_nodo_inicio
+            return valor
+
+    def consultar(self):
+        if not self.__lista.head:
+            print("La pila está vacía.")
+            return None
+        else:
+            return self.__lista.consultar_lista()
+
+# mi_pila = Pila()
+# mi_pila.consultar()
+# mi_pila.apilar("S")
+# mi_pila.apilar("I")
+# mi_pila.apilar("L")
+# mi_pila.apilar("O")
+# mi_pila.apilar("H")
+# mi_pila.apilar("B")
+# print(mi_pila.desapilar())
+# print(mi_pila.desapilar())
+# print(mi_pila.desapilar())
+# print(mi_pila.desapilar())
+# print(mi_pila.desapilar())
+# print(mi_pila.desapilar())
+
+# print(mi_pila.consultar())
         
 
-mi_pila = Pila()
-mi_pila.consultar()
-
-mi_pila.apilar("S")
-mi_pila.apilar("I")
-mi_pila.apilar("L")
-mi_pila.apilar("O")
-mi_pila.apilar("H")
-mi_pila.apilar("B")
-
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-
-print(mi_pila.consultar())
+mi_cola = Cola()
+mi_cola.consultar()
+mi_cola.consultar()
+mi_cola.encolar("a")
+mi_cola.encolar("b")
+mi_cola.encolar("c")
+mi_cola.encolar("d")
+mi_cola.encolar("e")
+mi_cola.consultar()
+mi_cola.desencolar()
+mi_cola.consultar()
+mi_cola.desencolar()
+mi_cola.consultar()
+mi_cola.desencolar()
+mi_cola.consultar()
+mi_cola.encolar("f")
+mi_cola.consultar()
+mi_cola.encolar("g")
+mi_cola.consultar()
+mi_cola.desencolar()
+mi_cola.consultar()
+mi_cola.desencolar()
+mi_cola.consultar()
+mi_cola.desencolar()
+mi_cola.consultar()
+mi_cola.encolar("h")
+mi_cola.consultar()
+mi_cola.encolar("i")
+mi_cola.consultar()
+mi_cola.desencolar()
+mi_cola.consultar()
+mi_cola.desencolar()
+mi_cola.consultar()
