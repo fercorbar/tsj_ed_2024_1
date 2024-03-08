@@ -17,9 +17,9 @@ class LinKedListDouble:
                 texto += f"{nodo_actual.data} -> "
                 nodo_actual = nodo_actual.next
             texto += "(null) (TAIL)"
-            return texto
+            print(texto)
         else:
-            return "Vacía"
+            print("la lista esta vacia")
 
     def agregar_nodo_al_inicio(self,data):
         new_node = Node(data)
@@ -42,22 +42,17 @@ class LinKedListDouble:
 
     def eliminar_nodo_inicio(self):
         if self.head:
-            if self.head.next:
-                self.head.next.prev = None
-                self.head = self.head.next
-            else:
-                self.head = None
-                self.tail = None
+            self.head.next.prev = None
+            self.head = self.head.next
+        else:
+            print("la lista esta vacia")
 
     def eliminar_nodo_final(self):
         if self.head:
-            if self.tail.prev:
-                self.tail.prev.next = None
-                self.tail = self.tail.prev
-            else:
-                self.head = None
-                self.tail = None
-
+            self.tail.prev.next = None
+            self.tail = self.tail.prev
+        else:
+            print("la lista esta vacia")
 
     def actualizar_nodo_con_valor(self , valor_viejo , valor_nuevo):
         if self.head:  #si tiene almenos un nodo
@@ -83,46 +78,25 @@ class LinKedListDouble:
                         nodo_actual.next= nodo_actual.next.next
                         break
                     nodo_actual = nodo_actual.next
-
-class Pila():
-    def __init__(self):
-        self.__lista = LinKedListDouble()
-
-    def apilar(self, valor):
-        self.__lista.agregar_nodo_al_final(valor)
-
-    def desapilar(self):
-        if not self.__lista.head:
-            print("No se puede desapilar, la pila está vacía.")
-            return None
         else:
-            valor = self.__lista.tail.data
-            self.__lista.eliminar_nodo_final()
-            return valor
-        
-    def consultar(self):
-        if not self.__lista.head:
-            print("No se puede consultar, la pila está vacía.")
-            return None
-        else:
-            return self.__lista.consultar_lista()
-        
+            print("la lista esta vacia ")   
 
-mi_pila = Pila()
-mi_pila.consultar()
 
-mi_pila.apilar("S")
-mi_pila.apilar("I")
-mi_pila.apilar("L")
-mi_pila.apilar("O")
-mi_pila.apilar("H")
-mi_pila.apilar("B")
 
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
-print(mi_pila.desapilar())
 
-print(mi_pila.consultar())
+
+
+mi_lista = LinKedListDouble()
+mi_lista.consultar_lista()
+mi_lista.agregar_nodo_al_inicio("A")
+mi_lista.agregar_nodo_al_final("B")
+mi_lista.agregar_nodo_al_final("C")
+mi_lista.consultar_lista()
+mi_lista.agregar_nodo_al_final("D")
+mi_lista.consultar_lista()
+#mi_lista.eliminar_nodo_final()
+#mi_lista.consultar_lista()
+mi_lista.actualizar_nodo_con_valor("C", "CASA")
+mi_lista.consultar_lista()
+mi_lista.eliminar_nodo_con_valor("D")
+mi_lista.consultar_lista()
