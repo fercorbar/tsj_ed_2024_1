@@ -84,7 +84,7 @@ class LinKedListDouble:
                         break
                     nodo_actual = nodo_actual.next
 
-class Pila():
+class Pila:
     def __init__(self):
         self.__lista = LinKedListDouble()
 
@@ -131,22 +131,22 @@ class Cola:
         else:
             return self.__lista.consultar_lista()
 
-# mi_pila = Pila()
-# mi_pila.consultar()
-# mi_pila.apilar("S")
-# mi_pila.apilar("I")
-# mi_pila.apilar("L")
-# mi_pila.apilar("O")
-# mi_pila.apilar("H")
-# mi_pila.apilar("B")
-# print(mi_pila.desapilar())
-# print(mi_pila.desapilar())
-# print(mi_pila.desapilar())
-# print(mi_pila.desapilar())
-# print(mi_pila.desapilar())
-# print(mi_pila.desapilar())
+mi_pila = Pila()
+mi_pila.consultar()
+mi_pila.apilar("S")
+mi_pila.apilar("I")
+mi_pila.apilar("L")
+mi_pila.apilar("O")
+mi_pila.apilar("H")
+mi_pila.apilar("B")
+print(mi_pila.desapilar())
+print(mi_pila.desapilar())
+print(mi_pila.desapilar())
+print(mi_pila.desapilar())
+print(mi_pila.desapilar())
+print(mi_pila.desapilar())
 
-# print(mi_pila.consultar())
+print(mi_pila.consultar())
         
 
 mi_cola = Cola()
